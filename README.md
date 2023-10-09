@@ -1,4 +1,4 @@
-# The Retail React App
+# Generative AI Chatbot
 
 This is an AI chatbot using generative AI solutions that can answer any question on the following dataset:
 Dataset: https://github.com/nailson/ifood-data-business-analyst-test/blob/master/ml_project1_data.csv
@@ -32,7 +32,11 @@ pip install flask
 To start your web server for python, run the following command in your project directory:
 
 ```bash
-python3.10 app.py 
+python3.10 app.py
+```
+or
+```bash
+python app.py
 ```
 
 To start your web server for react local development, run the following command in your chatbot-app folder:
