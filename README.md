@@ -6,6 +6,9 @@ Dictionary: https://github.com/nailson/ifood-data-business-analyst-test/blob/mas
 
 ## Requirements
 
+1. Add your Openai API KEY to the .env file .
+
+2. Requirements
 ```
   Node v20.8.0
   npm 10.1.0
