@@ -1,12 +1,14 @@
 import React, {useEffect, useState} from "react";
 import {Box, Button, Card, CardContent, Grid, TextField} from "@mui/material";
 import Message from "./components/Messages";
+import Loading from "./components/loading";
 
 function App() {
 
 const messagesListRef = React.createRef();
 const [messageInput, setMessageInput] = useState("");
 const [messages, setMessages] = useState([]);
+const [loading, setLoading] = useState(false);
 
 useEffect(() => {
  
@@ -21,7 +23,7 @@ useEffect(() => {
 
 
 const sendMessage = (question) => {
-
+  setLoading(true)
   setMessages([
     ...messages,
     {
@@ -49,9 +51,11 @@ const sendMessage = (question) => {
           isCustomer: false,
         }
       ]);
+      setLoading(false)
     })
     .catch((error) => {
     console.error("Error", error)
+    setLoading(false)
   })
 }
 
@@ -85,11 +89,14 @@ useEffect(() => {
           >
             <Box sx={{m: 1, mr: 2}}>
               {messages.map((message, index) => (
+                <>
                 <Message
                   key={index}
                   content={message.content}
                   isCustomer={message.isCustomer}
                 />
+               {loading && index === messages.length-1 && <Loading />}
+                </>
               ))}
             </Box>
           </Box>

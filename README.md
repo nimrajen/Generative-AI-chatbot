@@ -52,6 +52,8 @@ Now that the development server is running, you can open a browser and preview y
 ## Images
 
 ![Screenshot](chatbot_1.png)
+![Screenshot](chatbot_4.png)
+![Screenshot](chatbot_5.png)
 ![Screenshot](chatbot_2.png)
 ![Screenshot](chatbot_3.png)
 
